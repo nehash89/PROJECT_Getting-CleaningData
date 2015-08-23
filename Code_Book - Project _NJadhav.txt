@@ -1,0 +1,60 @@
+Code Book – Getting & Cleaning Data
+Please refer to the original code book – features_info that was provided with the Project.  Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Following is the description of all the variables created in the code:
+FOR PART 1: (Combining all data sets)
+
+x:  X_test and X_train data combined in one table (size: 10299 x 561)
+
+y: y_test and y_train data combined in one table (size: 10299 x 1)
+
+subject: subject_test and subject_train data combined in one table (size: 10299 x 1)
+
+body_acc_x: body_acc_x_test and body_acc_x_train data combined in one table (size: 10299 x 128)
+
+SIMILAR TO body_acc_x, body_acc_y and body_acc_z were created by combining the test and train data (size: 10299 x 128)
+
+body_gyro_x: body_gyro_x_test and body_gyro_x_train data combined in one table (size: 10299 x 128)
+
+SIMILAR TO body_gyro_x, body_gyro_y and body_gyro_z were created by combining the test and train data (size: 10299 x 128)
+
+total_acc_x: total_acc_x_test and total_acc_x_train data combined in one table (size: 10299 x 128)
+
+SIMILAR TO total_acc_x, total_acc_y and total_acc_z were created by combining the test and train data (size: 10299 x 128)
+
+final_df: Data frame created by combining (x, y, subject, body_acc_x, body_acc_y, body_acc_z, body_gyro_x, body_gyro_y, body_gyro_z, total_acc_x, total_acc_y, total_acc_z) (size: 10299 x 1715)
+
+
+FOR PART 4 (Appropriately labels the data set with descriptive variable names)
+
+featnames: Vector created by sub-setting features from features. Txt
+
+
+FOR PART 2 (Extracts only the measurements on the mean and standard deviation for each measurement)
+
+mean_vect: Vector with indexes of all feature names that contain ‘mean’ string in their names
+
+std_vect: Vector with indexes of all feature names that contain ‘std’ string in their names
+
+meanstd: Vector formed by combining mean_vect and std_vect
+
+final_mod: Table created by sub-setting only mean and standard deviation of each variable 
+
+
+FOR PART 3 (Uses descriptive activity names to name the activities in the data set)
+
+final_mod2: Table created by joining Activities and final_mod (Activity Names added to final_mod table)
+
+
+FOR PART 5 (From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject)
+
+FINAL_CLEAN_DATA: Table created by summarizing averages of each variable for each activity and each subject
+
+
+
+
+
+
+
+
+Nehash Jadhav
+
